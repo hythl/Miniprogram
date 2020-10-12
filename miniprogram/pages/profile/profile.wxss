@@ -1,0 +1,60 @@
+/* miniprogram/pages/profile/profile.wxss */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 35rpx;
+}
+
+.userinfo {
+  display: flex;
+  flex-direction: row;
+}
+
+.userbasicinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 150rpx;
+  height: 150rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+  background-size: cover;
+  background-color: white;
+}
+
+.userinfo-avatar[size] {
+  width: 150rpx;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.userinfo-learningTime {
+  margin-left: 80rpx;
+  margin-top: 60rpx;
+}
+
+.diary {
+  margin-top: 50rpx;
+  display: block;
+  flex-direction: row;
+  text-align: start;
+}
+
+.diary-title {
+  font-size: 45rpx;
+  font-weight: 600;
+}
+
+textarea {
+  background-color: rgb(253, 252, 242);
+  width: 650rpx;
+  margin-top: 20rpx;
+  margin-left: 10rpx;
+}
+

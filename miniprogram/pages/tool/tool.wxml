@@ -1,0 +1,22 @@
+<!--miniprogram/pages/tools.wxml-->
+<view class="container">
+  
+<text>{{msg}}</text>
+<view class='timer'>
+    <text>{{hours}}</text>
+    <text> ：</text>
+    <text>{{minutes}}</text>
+    <text> ：</text>
+    <text>{{seconds}}</text>
+</view>
+
+<button bindtap="timerButton">{{isTiming?"End":"Start"}}</button>
+
+<view class='todoList'>
+    <navigator url="./pages/todoList/todoList" open-type="navigate">
+    <text>TodoList</text>
+    </navigator>
+</view>
+
+</view>
+

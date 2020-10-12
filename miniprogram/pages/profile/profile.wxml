@@ -1,0 +1,42 @@
+<!--miniprogram/pages/profile/profile.wxml-->
+<view class="container">
+
+<view class="userinfo">
+  <view class="userbasicinfo">
+    <button
+      open-type="getUserInfo" 
+      bindgetuserinfo="onGetUserInfo"
+      style="background-image: url({{avatarUrl}})"
+      class="userinfo-avatar"
+      size="default">
+    </button>
+  <text class="userinfo-nickname">{{nickName}}</text>
+  </view>
+  <text class="userinfo-learningTime">今天学习了{{learnedHours}}小时{{learnedMinutes}}分钟</text>
+</view>
+
+<view class="diary">
+  <text class="diary-title">学习日记</text> 
+  <view class="diary-text">
+    <view class="textarea-wrp">
+      <textarea 
+      value = "{{newContent}}"
+      bindinput= "onInputNewContent"
+      placeholder = "记录下你的学习点滴吧 :)"
+      auto-focus="true" 
+      style="height: 5em"> 
+    </textarea>
+    </view>
+    <view class="diary-image">
+        <mp-cells>
+            <mp-cell>
+                <mp-uploader bindfail="uploadError" bindsuccess="uploadSuccess" select="{{selectFile}}" upload="{{uplaodFile}}" files="{{files}}" max-count="3" title="加点图呀" ></mp-uploader>
+            </mp-cell>
+        </mp-cells>
+    </view>
+    <button bindtap="uploadContent"> 提交 </button>
+  </view>
+
+</view>
+
+</view>
